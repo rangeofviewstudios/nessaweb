@@ -5,7 +5,6 @@ import { Instagram, Twitter, Youtube, Mail, MapPin } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Music", href: "#music" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 

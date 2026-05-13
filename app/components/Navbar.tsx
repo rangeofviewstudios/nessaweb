@@ -6,11 +6,10 @@ import { X, Menu } from "lucide-react";
 
 const NAV_LINKS = [
   { label: "Music", href: "#music" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
-const SECTION_IDS = ["home", "music", "gallery", "contact"];
+const SECTION_IDS = ["home", "music", "contact"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
