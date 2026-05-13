@@ -23,35 +23,6 @@ export default function Footer() {
         overflow: "hidden",
       }}
     >
-      {/* Decorative large background text */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          overflow: "hidden",
-          pointerEvents: "none",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-cormorant)",
-            fontSize: "clamp(8rem, 22vw, 20rem)",
-            fontWeight: 700,
-            color: "#2C0015",
-            opacity: 0.05,
-            letterSpacing: "-0.02em",
-            userSelect: "none",
-            whiteSpace: "nowrap",
-          }}
-        >
-          NAINI
-        </span>
-      </div>
-
       {/* Content */}
       <div
         style={{

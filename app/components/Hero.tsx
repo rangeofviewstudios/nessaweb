@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
-import { ChevronDown, Instagram, Twitter, Youtube } from "lucide-react";
+import { ChevronDown, Instagram, Twitter, Youtube, Play } from "lucide-react";
 import SplitText from "@/app/components/SplitText";
 
 const containerVariants: Variants = {
@@ -25,6 +26,9 @@ const itemVariants: Variants = {
 };
 
 export default function Hero() {
+  const [discoverHover, setDiscoverHover] = useState(false);
+  const [streamHover, setStreamHover] = useState(false);
+
   function scrollToAbout() {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   }
@@ -45,29 +49,6 @@ export default function Hero() {
         overflow: "hidden",
       }}
     >
-      {/* Decorative vertical text */}
-      <span
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          left: "0",
-          top: "50%",
-          transform: "translateY(-50%) rotate(-90deg)",
-          fontFamily: "var(--font-cormorant)",
-          fontSize: "clamp(5rem, 18vw, 16rem)",
-          fontWeight: 700,
-          color: "#2C0015",
-          opacity: 0.05,
-          letterSpacing: "0.1em",
-          pointerEvents: "none",
-          userSelect: "none",
-          whiteSpace: "nowrap",
-          zIndex: 0,
-        }}
-      >
-        NAINI
-      </span>
-
       {/* Soft glow behind image */}
       <div
         aria-hidden="true"
@@ -221,12 +202,69 @@ export default function Hero() {
           variants={itemVariants}
           style={{ display: "flex", gap: "0.875rem", marginBottom: "2.5rem", flexWrap: "wrap" }}
         >
+          {/* Stream Now — pill + shimmer sweep */}
           <button
             onClick={scrollToMusic}
+            onMouseEnter={() => setStreamHover(true)}
+            onMouseLeave={() => setStreamHover(false)}
             style={{
               padding: "0.75rem 1.75rem",
-              backgroundColor: "#FF1B6D",
+              background:
+                "linear-gradient(105deg, #FF1B6D 0%, #FF1B6D 38%, rgba(255,255,255,0.38) 50%, #FF1B6D 62%, #FF1B6D 100%)",
+              backgroundSize: "280% auto",
+              animation: "btnShimmer 2.8s linear infinite",
               color: "#FFF0F6",
+              fontFamily: "var(--font-space-mono)",
+              fontSize: "0.7rem",
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              border: "none",
+              borderRadius: "50px",
+              cursor: "pointer",
+              transition: "box-shadow 0.25s ease, transform 0.25s ease",
+              fontWeight: 400,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.55rem",
+              boxShadow: streamHover
+                ? "0 0 32px rgba(255,27,109,0.5), 0 4px 16px rgba(255,27,109,0.25)"
+                : "0 0 16px rgba(255,27,109,0.22)",
+              transform: streamHover ? "translateY(-2px)" : "translateY(0)",
+            }}
+          >
+            <Play
+              size={11}
+              fill="#FFF0F6"
+              color="#FFF0F6"
+              style={{
+                transition: "transform 0.25s ease",
+                transform: streamHover ? "scale(1.3)" : "scale(1)",
+              }}
+            />
+            Stream Now
+          </button>
+
+          {/* Discover — corner brackets + fill sweep */}
+          <button
+            onClick={scrollToAbout}
+            onMouseEnter={() => setDiscoverHover(true)}
+            onMouseLeave={() => setDiscoverHover(false)}
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              padding: "0.75rem 1.75rem",
+              background: `
+                linear-gradient(#2C0015,#2C0015) top left / 10px 1.5px no-repeat,
+                linear-gradient(#2C0015,#2C0015) left top / 1.5px 10px no-repeat,
+                linear-gradient(#2C0015,#2C0015) top right / 10px 1.5px no-repeat,
+                linear-gradient(#2C0015,#2C0015) right top / 1.5px 10px no-repeat,
+                linear-gradient(#2C0015,#2C0015) bottom left / 10px 1.5px no-repeat,
+                linear-gradient(#2C0015,#2C0015) left bottom / 1.5px 10px no-repeat,
+                linear-gradient(#2C0015,#2C0015) bottom right / 10px 1.5px no-repeat,
+                linear-gradient(#2C0015,#2C0015) right bottom / 1.5px 10px no-repeat,
+                transparent
+              `,
+              color: discoverHover ? "#FFF0F6" : "#2C0015",
               fontFamily: "var(--font-space-mono)",
               fontSize: "0.7rem",
               letterSpacing: "0.1em",
@@ -234,49 +272,27 @@ export default function Hero() {
               border: "none",
               borderRadius: "2px",
               cursor: "pointer",
-              transition: "all 0.25s ease",
               fontWeight: 400,
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.boxShadow =
-                "0 0 30px rgba(255,27,109,0.45)";
-              (e.currentTarget as HTMLButtonElement).style.transform =
-                "translateY(-2px)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
-              (e.currentTarget as HTMLButtonElement).style.transform =
-                "translateY(0)";
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.55rem",
+              transition: "color 0.3s ease",
             }}
           >
-            Stream Now
-          </button>
-          <button
-            onClick={scrollToAbout}
-            style={{
-              padding: "0.75rem 1.75rem",
-              backgroundColor: "transparent",
-              color: "#2C0015",
-              fontFamily: "var(--font-space-mono)",
-              fontSize: "0.7rem",
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              border: "1px solid rgba(44,0,21,0.3)",
-              borderRadius: "2px",
-              cursor: "pointer",
-              transition: "all 0.25s ease",
-              fontWeight: 400,
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = "#FF1B6D";
-              (e.currentTarget as HTMLButtonElement).style.color = "#FF1B6D";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(44,0,21,0.3)";
-              (e.currentTarget as HTMLButtonElement).style.color = "#2C0015";
-            }}
-          >
-            Discover
+            {/* Fill sweep layer */}
+            <span
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: 0,
+                backgroundColor: "#FF1B6D",
+                transform: discoverHover ? "scaleX(1)" : "scaleX(0)",
+                transformOrigin: "left center",
+                transition: "transform 0.32s cubic-bezier(0.32,0.72,0,1)",
+                zIndex: 0,
+              }}
+            />
+            <span style={{ position: "relative", zIndex: 1 }}>Discover</span>
           </button>
         </motion.div>
 
@@ -353,6 +369,10 @@ export default function Hero() {
         @keyframes scrollBounce {
           0%, 100% { transform: translateY(0); opacity: 0.5; }
           50% { transform: translateY(6px); opacity: 1; }
+        }
+        @keyframes btnShimmer {
+          0% { background-position: 200% center; }
+          100% { background-position: -200% center; }
         }
       `}</style>
     </div>
