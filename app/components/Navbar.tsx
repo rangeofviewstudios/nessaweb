@@ -5,14 +5,12 @@ import Image from "next/image";
 import { X, Menu } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
   { label: "Music", href: "#music" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
 
-const SECTION_IDS = ["home", "about", "music", "gallery", "team", "contact"];
+const SECTION_IDS = ["home", "music", "gallery", "contact"];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

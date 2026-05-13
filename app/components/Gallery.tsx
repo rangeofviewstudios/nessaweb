@@ -83,7 +83,7 @@ export default function Gallery() {
               marginBottom: "0.5rem",
             }}
           >
-            03 / Gallery
+            02 / Gallery
           </p>
           <SplitText
             tag="h2"

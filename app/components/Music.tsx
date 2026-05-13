@@ -71,7 +71,7 @@ export default function Music() {
                 marginBottom: "0.5rem",
               }}
             >
-              02 / Music
+              01 / Music
             </p>
             <SplitText
               tag="h2"

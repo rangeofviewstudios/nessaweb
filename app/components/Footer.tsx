@@ -4,10 +4,8 @@ import Image from "next/image";
 import { Instagram, Twitter, Youtube, Mail, MapPin } from "lucide-react";
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
   { label: "Music", href: "#music" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Team", href: "#team" },
   { label: "Contact", href: "#contact" },
 ];
 
