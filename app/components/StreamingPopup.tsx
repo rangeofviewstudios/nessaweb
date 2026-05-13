@@ -63,7 +63,7 @@ export default function StreamingPopup() {
             alignItems: "center",
             justifyContent: "center",
             padding: "1rem",
-            backgroundColor: "rgba(7, 5, 12, 0.92)",
+            backgroundColor: "rgba(150, 8, 72, 0.95)",
             backdropFilter: "blur(12px)",
           }}
           onClick={handleDismiss}
@@ -94,7 +94,7 @@ export default function StreamingPopup() {
               position: "relative",
               width: "100%",
               maxWidth: "520px",
-              backgroundColor: "rgba(14, 10, 22, 0.97)",
+              backgroundColor: "rgba(100, 5, 48, 0.97)",
               border: "1px solid rgba(255, 27, 109, 0.2)",
               borderRadius: "2px",
               padding: "2.5rem 2rem",
@@ -146,7 +146,7 @@ export default function StreamingPopup() {
                     alignItems: "center",
                     gap: "0.65rem",
                     padding: "0.75rem 1rem",
-                    backgroundColor: "rgba(22, 15, 31, 0.9)",
+                    backgroundColor: "rgba(80, 5, 38, 0.85)",
                     borderLeft: `3px solid ${platform.borderColor}`,
                     borderTop: "1px solid rgba(240,228,235,0.06)",
                     borderRight: "1px solid rgba(240,228,235,0.06)",
@@ -158,13 +158,13 @@ export default function StreamingPopup() {
                   }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                      "rgba(32, 22, 44, 0.9)";
+                      "rgba(110, 8, 52, 0.9)";
                     (e.currentTarget as HTMLAnchorElement).style.transform =
                       "translateY(-1px)";
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                      "rgba(22, 15, 31, 0.9)";
+                      "rgba(80, 5, 38, 0.85)";
                     (e.currentTarget as HTMLAnchorElement).style.transform =
                       "translateY(0)";
                   }}
@@ -203,7 +203,7 @@ export default function StreamingPopup() {
                 width: "100%",
                 padding: "0.9rem",
                 backgroundColor: "#FF1B6D",
-                color: "#07050C",
+                color: "#6B0030",
                 fontFamily: "var(--font-space-mono)",
                 fontSize: "0.75rem",
                 letterSpacing: "0.15em",

@@ -46,7 +46,7 @@ export default function Gallery() {
   return (
     <div
       style={{
-        backgroundColor: "#07050C",
+        backgroundColor: "#B5105A",
         padding: "clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 5rem)",
         position: "relative",
       }}

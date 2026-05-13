@@ -34,7 +34,7 @@ export default function Music() {
   return (
     <div
       style={{
-        backgroundColor: "#0E0A16",
+        backgroundColor: "#9A0D4D",
         position: "relative",
         overflow: "hidden",
       }}
@@ -111,7 +111,7 @@ export default function Music() {
         >
           <div
             style={{
-              backgroundColor: "#160F1F",
+              backgroundColor: "#7D0A3E",
               border: "1px solid rgba(240,228,235,0.08)",
               borderRadius: "2px",
               overflow: "hidden",
@@ -223,7 +223,7 @@ export default function Music() {
                       alignItems: "center",
                       gap: "0.4rem",
                       padding: "0.4rem 0.8rem",
-                      backgroundColor: "rgba(7,5,12,0.6)",
+                      backgroundColor: "rgba(100,5,45,0.5)",
                       border: `1px solid ${p.color}33`,
                       borderRadius: "2px",
                       textDecoration: "none",
@@ -274,7 +274,7 @@ export default function Music() {
                 fontFamily: "var(--font-space-mono)",
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
-                color: "#7B6B77",
+                color: "rgba(255,220,240,0.6)",
                 textTransform: "uppercase",
                 marginBottom: "1rem",
               }}
@@ -341,7 +341,7 @@ export default function Music() {
                     style={{
                       fontFamily: "var(--font-space-mono)",
                       fontSize: "0.6rem",
-                      color: "#7B6B77",
+                      color: "rgba(255,220,240,0.6)",
                     }}
                   >
                     {release.year}
@@ -353,7 +353,7 @@ export default function Music() {
                         href="#"
                         aria-label={`Stream ${release.title} on ${p.name}`}
                         style={{
-                          color: "#7B6B77",
+                          color: "rgba(255,220,240,0.6)",
                           transition: "color 0.2s ease",
                         }}
                         onMouseEnter={(e) => {
@@ -381,7 +381,7 @@ export default function Music() {
       {/* Marquee strip */}
       <div
         style={{
-          backgroundColor: "#07050C",
+          backgroundColor: "#7D0A3E",
           borderTop: "1px solid rgba(255,27,109,0.15)",
           borderBottom: "1px solid rgba(255,27,109,0.15)",
           padding: "1rem 0",

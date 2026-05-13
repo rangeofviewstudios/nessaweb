@@ -68,7 +68,7 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: scrolled ? "rgba(7,5,12,0.92)" : "transparent",
+          backgroundColor: scrolled ? "rgba(155,10,65,0.96)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
           borderBottom: scrolled
             ? "1px solid rgba(240,228,235,0.06)"
@@ -187,7 +187,7 @@ export default function Navbar() {
             position: "fixed",
             inset: 0,
             zIndex: 999,
-            backgroundColor: "rgba(7,5,12,0.97)",
+            backgroundColor: "rgba(125,10,62,0.98)",
             backdropFilter: "blur(20px)",
             display: "flex",
             flexDirection: "column",

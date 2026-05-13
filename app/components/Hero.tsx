@@ -38,7 +38,7 @@ export default function Hero() {
       style={{
         position: "relative",
         minHeight: "100svh",
-        backgroundColor: "#07050C",
+        backgroundColor: "#B5105A",
         display: "flex",
         alignItems: "center",
         /* Push content visual-center below the fixed 72px navbar */
@@ -79,7 +79,7 @@ export default function Hero() {
           width: "65%",
           height: "100%",
           background:
-            "radial-gradient(ellipse 60% 70% at 75% 45%, rgba(255,27,109,0.32) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 70% at 75% 45%, rgba(255,220,240,0.18) 0%, transparent 70%)",
           pointerEvents: "none",
           zIndex: 1,
         }}
@@ -115,7 +115,7 @@ export default function Hero() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, #07050C 0%, rgba(7,5,12,0.4) 30%, transparent 60%)",
+              "linear-gradient(to right, #B5105A 0%, rgba(181,16,90,0.5) 30%, transparent 60%)",
           }}
         />
       </div>
@@ -207,7 +207,7 @@ export default function Hero() {
             fontSize: "0.875rem",
             fontWeight: 300,
             lineHeight: 1.85,
-            color: "#7B6B77",
+            color: "rgba(255,230,242,0.7)",
             marginBottom: "2.25rem",
             maxWidth: "320px",
           }}
@@ -262,7 +262,7 @@ export default function Hero() {
               fontSize: "0.7rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              border: "1px solid rgba(240,228,235,0.25)",
+              border: "1px solid rgba(255,230,242,0.4)",
               borderRadius: "2px",
               cursor: "pointer",
               transition: "all 0.25s ease",
@@ -298,16 +298,16 @@ export default function Hero() {
               href="#"
               aria-label={label}
               style={{
-                color: "#7B6B77",
+                color: "rgba(255,230,242,0.65)",
                 transition: "all 0.25s ease",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#FFF0F6";
                 (e.currentTarget as HTMLAnchorElement).style.filter =
-                  "drop-shadow(0 0 8px rgba(255,27,109,0.6))";
+                  "drop-shadow(0 0 10px rgba(255,255,255,0.7))";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#7B6B77";
+                (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,230,242,0.65)";
                 (e.currentTarget as HTMLAnchorElement).style.filter = "none";
               }}
             >
@@ -327,14 +327,14 @@ export default function Hero() {
           left: "clamp(2rem, 5vw, 5rem)",
           zIndex: 10,
           background: "none",
-          border: "1px solid rgba(240,228,235,0.12)",
+          border: "1px solid rgba(255,230,242,0.3)",
           borderRadius: "50px",
           cursor: "pointer",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           gap: "0.5rem",
-          color: "#7B6B77",
+          color: "rgba(255,230,242,0.65)",
           padding: "0.45rem 0.9rem 0.45rem 0.7rem",
           animation: "scrollBounce 2.5s ease-in-out infinite",
         }}

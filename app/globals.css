@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #07050C;
-  --color-surface: #0E0A16;
-  --color-elevated: #160F1F;
-  --color-accent: #FF1B6D;
-  --color-accent-dim: rgba(255, 27, 109, 0.15);
-  --color-accent-glow: rgba(255, 27, 109, 0.35);
-  --color-text: #F0E4EB;
-  --color-text-muted: #7B6B77;
+  --color-bg: #B5105A;
+  --color-surface: #9A0D4D;
+  --color-elevated: #7D0A3E;
+  --color-accent: #FF6EB4;
+  --color-accent-dim: rgba(255, 110, 180, 0.2);
+  --color-accent-glow: rgba(255, 110, 180, 0.45);
+  --color-text: #FFF0F6;
+  --color-text-muted: rgba(255, 230, 242, 0.6);
   --color-border: rgba(240, 228, 235, 0.08);
 
   --font-display: var(--font-cormorant);
@@ -31,7 +31,11 @@ html {
 }
 
 body {
-  background-color: #07050C;
+  background-color: #B5105A;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255,160,210,0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(80,0,30,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 0% 60%, rgba(200,10,90,0.2) 0%, transparent 55%);
   color: #F0E4EB;
   font-family: var(--font-outfit), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,8 +50,8 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.09;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
 }
 
@@ -62,7 +66,7 @@ body::after {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #07050C;
+  background: #9A0D4D;
 }
 ::-webkit-scrollbar-thumb {
   background: #FF1B6D;

@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#07050C",
+        backgroundColor: "#9A0D4D",
         borderTop: "1px solid #FF1B6D",
         position: "relative",
         overflow: "hidden",
@@ -43,7 +43,7 @@ export default function Footer() {
             fontSize: "clamp(8rem, 22vw, 20rem)",
             fontWeight: 700,
             color: "#F0E4EB",
-            opacity: 0.025,
+            opacity: 0.07,
             letterSpacing: "-0.02em",
             userSelect: "none",
             whiteSpace: "nowrap",
@@ -113,7 +113,7 @@ export default function Footer() {
                     justifyContent: "center",
                     border: "1px solid rgba(240,228,235,0.1)",
                     borderRadius: "2px",
-                    color: "#7B6B77",
+                    color: "rgba(255,220,240,0.6)",
                     transition: "all 0.25s ease",
                   }}
                   onMouseEnter={(e) => {
@@ -147,7 +147,7 @@ export default function Footer() {
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#7B6B77",
+                color: "rgba(255,220,240,0.6)",
                 marginBottom: "1.25rem",
               }}
             >
@@ -196,7 +196,7 @@ export default function Footer() {
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "#7B6B77",
+                color: "rgba(255,220,240,0.6)",
                 marginBottom: "1.25rem",
               }}
             >
@@ -304,7 +304,7 @@ export default function Footer() {
               fontFamily: "var(--font-space-mono)",
               fontSize: "0.6rem",
               letterSpacing: "0.08em",
-              color: "#7B6B77",
+              color: "rgba(255,220,240,0.6)",
             }}
           >
             &copy; {new Date().getFullYear()} NAINI. All rights reserved.
@@ -334,7 +334,7 @@ export default function Footer() {
                 fontSize: "0.58rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#7B6B77",
+                color: "rgba(255,220,240,0.6)",
                 whiteSpace: "nowrap",
               }}
             >
