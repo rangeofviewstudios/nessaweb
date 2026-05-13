@@ -34,7 +34,7 @@ export default function Music() {
   return (
     <div
       style={{
-        backgroundColor: "#9A0D4D",
+        backgroundColor: "#FFB3C6",
         position: "relative",
         overflow: "hidden",
       }}
@@ -49,7 +49,7 @@ export default function Music() {
           zIndex: 1,
         }}
       >
-        {/* Section header — large editorial right-aligned */}
+        {/* Section header */}
         <div
           ref={headerRef as React.RefObject<HTMLDivElement>}
           className={`reveal-up ${headerVisible ? "visible" : ""}`}
@@ -90,7 +90,7 @@ export default function Music() {
                 fontSize: "clamp(5rem, 14vw, 12rem)",
                 fontWeight: 700,
                 lineHeight: 0.85,
-                color: "#F0E4EB",
+                color: "#2C0015",
                 letterSpacing: "-0.02em",
                 marginRight: "clamp(-1rem, -4vw, -3rem)",
               }}
@@ -111,19 +111,17 @@ export default function Music() {
         >
           <div
             style={{
-              backgroundColor: "#7D0A3E",
-              border: "1px solid rgba(240,228,235,0.08)",
+              backgroundColor: "#FF8FAB",
+              border: "1px solid rgba(44,0,21,0.1)",
               borderRadius: "2px",
               overflow: "hidden",
               transition: "border-color 0.3s ease",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLDivElement).style.borderColor =
-                "rgba(255,27,109,0.3)";
+              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,27,109,0.5)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLDivElement).style.borderColor =
-                "rgba(240,228,235,0.08)";
+              (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(44,0,21,0.1)";
             }}
           >
             {/* Cover art */}
@@ -135,14 +133,12 @@ export default function Music() {
                 style={{ objectFit: "cover", objectPosition: "center" }}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Dark overlay */}
               <div
                 aria-hidden="true"
                 style={{
                   position: "absolute",
                   inset: 0,
-                  background:
-                    "linear-gradient(to top, rgba(22,15,31,0.9) 0%, transparent 60%)",
+                  background: "linear-gradient(to top, rgba(255,143,171,0.85) 0%, transparent 60%)",
                 }}
               />
               {/* Play button */}
@@ -156,8 +152,8 @@ export default function Music() {
                   width: "64px",
                   height: "64px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(255,27,109,0.15)",
-                  border: "2px solid rgba(255,27,109,0.5)",
+                  backgroundColor: "rgba(255,255,255,0.25)",
+                  border: "2px solid rgba(255,255,255,0.6)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -166,20 +162,14 @@ export default function Music() {
                   backdropFilter: "blur(8px)",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    "rgba(255,27,109,0.4)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow =
-                    "0 0 30px rgba(255,27,109,0.4)";
-                  (e.currentTarget as HTMLButtonElement).style.transform =
-                    "translate(-50%, -50%) scale(1.1)";
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255,27,109,0.35)";
+                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "0 0 30px rgba(255,27,109,0.4)";
+                  (e.currentTarget as HTMLButtonElement).style.transform = "translate(-50%, -50%) scale(1.1)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLButtonElement).style.backgroundColor =
-                    "rgba(255,27,109,0.15)";
-                  (e.currentTarget as HTMLButtonElement).style.boxShadow =
-                    "none";
-                  (e.currentTarget as HTMLButtonElement).style.transform =
-                    "translate(-50%, -50%) scale(1)";
+                  (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255,255,255,0.25)";
+                  (e.currentTarget as HTMLButtonElement).style.boxShadow = "none";
+                  (e.currentTarget as HTMLButtonElement).style.transform = "translate(-50%, -50%) scale(1)";
                 }}
               >
                 <Play size={22} fill="#FF1B6D" color="#FF1B6D" style={{ marginLeft: "3px" }} />
@@ -206,7 +196,7 @@ export default function Music() {
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   fontStyle: "italic",
                   fontWeight: 400,
-                  color: "#F0E4EB",
+                  color: "#2C0015",
                   marginBottom: "1.25rem",
                 }}
               >
@@ -223,23 +213,19 @@ export default function Music() {
                       alignItems: "center",
                       gap: "0.4rem",
                       padding: "0.4rem 0.8rem",
-                      backgroundColor: "rgba(100,5,45,0.5)",
-                      border: `1px solid ${p.color}33`,
+                      backgroundColor: "rgba(255,255,255,0.3)",
+                      border: `1px solid ${p.color}55`,
                       borderRadius: "2px",
                       textDecoration: "none",
                       transition: "all 0.25s ease",
                     }}
                     onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                        p.color;
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                        `${p.color}22`;
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = p.color;
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = `${p.color}22`;
                     }}
                     onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                        `${p.color}33`;
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                        "rgba(7,5,12,0.6)";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = `${p.color}55`;
+                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,255,255,0.3)";
                     }}
                   >
                     <Music2 size={12} style={{ color: p.color }} />
@@ -247,8 +233,8 @@ export default function Music() {
                       style={{
                         fontFamily: "var(--font-outfit)",
                         fontSize: "0.72rem",
-                        fontWeight: 400,
-                        color: "#F0E4EB",
+                        fontWeight: 500,
+                        color: "#2C0015",
                       }}
                     >
                       {p.name}
@@ -274,7 +260,7 @@ export default function Music() {
                 fontFamily: "var(--font-space-mono)",
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
-                color: "rgba(255,220,240,0.6)",
+                color: "rgba(44,0,21,0.5)",
                 textTransform: "uppercase",
                 marginBottom: "1rem",
               }}
@@ -289,27 +275,21 @@ export default function Music() {
                   alignItems: "center",
                   gap: "1.25rem",
                   padding: "1.25rem 1rem",
-                  borderTop: "1px solid rgba(240,228,235,0.06)",
+                  borderTop: "1px solid rgba(44,0,21,0.1)",
                   borderLeft: "2px solid transparent",
                   transition: "all 0.3s ease",
                   cursor: "pointer",
                   transitionDelay: `${i * 0.05}s`,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor =
-                    "#FF1B6D";
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor =
-                    "rgba(255,27,109,0.05)";
-                  (e.currentTarget as HTMLDivElement).style.paddingLeft =
-                    "1.5rem";
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = "#FF1B6D";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "rgba(255,27,109,0.06)";
+                  (e.currentTarget as HTMLDivElement).style.paddingLeft = "1.5rem";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor =
-                    "transparent";
-                  (e.currentTarget as HTMLDivElement).style.backgroundColor =
-                    "transparent";
-                  (e.currentTarget as HTMLDivElement).style.paddingLeft =
-                    "1rem";
+                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = "transparent";
+                  (e.currentTarget as HTMLDivElement).style.backgroundColor = "transparent";
+                  (e.currentTarget as HTMLDivElement).style.paddingLeft = "1rem";
                 }}
               >
                 <span
@@ -317,7 +297,7 @@ export default function Music() {
                     fontFamily: "var(--font-space-mono)",
                     fontSize: "0.65rem",
                     color: "#FF1B6D",
-                    opacity: 0.7,
+                    opacity: 0.8,
                     minWidth: "28px",
                   }}
                 >
@@ -329,7 +309,7 @@ export default function Music() {
                       fontFamily: "var(--font-cormorant)",
                       fontSize: "1.4rem",
                       fontStyle: "italic",
-                      color: "#F0E4EB",
+                      color: "#2C0015",
                       lineHeight: 1.2,
                     }}
                   >
@@ -341,7 +321,7 @@ export default function Music() {
                     style={{
                       fontFamily: "var(--font-space-mono)",
                       fontSize: "0.6rem",
-                      color: "rgba(255,220,240,0.6)",
+                      color: "rgba(44,0,21,0.45)",
                     }}
                   >
                     {release.year}
@@ -353,16 +333,14 @@ export default function Music() {
                         href="#"
                         aria-label={`Stream ${release.title} on ${p.name}`}
                         style={{
-                          color: "rgba(255,220,240,0.6)",
+                          color: "rgba(44,0,21,0.4)",
                           transition: "color 0.2s ease",
                         }}
                         onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLAnchorElement).style.color =
-                            p.color;
+                          (e.currentTarget as HTMLAnchorElement).style.color = p.color;
                         }}
                         onMouseLeave={(e) => {
-                          (e.currentTarget as HTMLAnchorElement).style.color =
-                            "#7B6B77";
+                          (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.4)";
                         }}
                       >
                         <Music2 size={13} />
@@ -372,8 +350,7 @@ export default function Music() {
                 </div>
               </div>
             ))}
-            {/* Bottom border */}
-            <div style={{ borderTop: "1px solid rgba(240,228,235,0.06)" }} />
+            <div style={{ borderTop: "1px solid rgba(44,0,21,0.1)" }} />
           </div>
         </div>
       </div>
@@ -381,9 +358,9 @@ export default function Music() {
       {/* Marquee strip */}
       <div
         style={{
-          backgroundColor: "#7D0A3E",
-          borderTop: "1px solid rgba(255,27,109,0.15)",
-          borderBottom: "1px solid rgba(255,27,109,0.15)",
+          backgroundColor: "#FF8FAB",
+          borderTop: "1px solid rgba(255,27,109,0.2)",
+          borderBottom: "1px solid rgba(255,27,109,0.2)",
           padding: "1rem 0",
           overflow: "hidden",
         }}

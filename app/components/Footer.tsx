@@ -17,8 +17,8 @@ export default function Footer() {
   return (
     <div
       style={{
-        backgroundColor: "#9A0D4D",
-        borderTop: "1px solid #FF1B6D",
+        backgroundColor: "#FFB3C6",
+        borderTop: "1px solid rgba(255,27,109,0.3)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -41,8 +41,8 @@ export default function Footer() {
             fontFamily: "var(--font-cormorant)",
             fontSize: "clamp(8rem, 22vw, 20rem)",
             fontWeight: 700,
-            color: "#F0E4EB",
-            opacity: 0.07,
+            color: "#2C0015",
+            opacity: 0.05,
             letterSpacing: "-0.02em",
             userSelect: "none",
             whiteSpace: "nowrap",
@@ -78,14 +78,18 @@ export default function Footer() {
               alt="NAINI"
               width={100}
               height={38}
-              style={{ objectFit: "contain", display: "block" }}
+              style={{
+                objectFit: "contain",
+                display: "block",
+                filter: "brightness(0) saturate(100%)",
+              }}
             />
             <p
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "1.1rem",
                 fontStyle: "italic",
-                color: "rgba(240,228,235,0.45)",
+                color: "rgba(44,0,21,0.5)",
                 lineHeight: 1.5,
               }}
             >
@@ -110,26 +114,20 @@ export default function Footer() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    border: "1px solid rgba(240,228,235,0.1)",
+                    border: "1px solid rgba(44,0,21,0.15)",
                     borderRadius: "2px",
-                    color: "rgba(255,220,240,0.6)",
+                    color: "rgba(44,0,21,0.45)",
                     transition: "all 0.25s ease",
                   }}
                   onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                      "#FF1B6D";
-                    (e.currentTarget as HTMLAnchorElement).style.color =
-                      "#FF1B6D";
-                    (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                      "0 0 12px rgba(255,27,109,0.3)";
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = "#FF1B6D";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
+                    (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 12px rgba(255,27,109,0.25)";
                   }}
                   onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLAnchorElement).style.borderColor =
-                      "rgba(240,228,235,0.1)";
-                    (e.currentTarget as HTMLAnchorElement).style.color =
-                      "#7B6B77";
-                    (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                      "none";
+                    (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(44,0,21,0.15)";
+                    (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.45)";
+                    (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
                   }}
                 >
                   <Icon size={15} />
@@ -146,7 +144,7 @@ export default function Footer() {
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "rgba(255,220,240,0.6)",
+                color: "rgba(44,0,21,0.5)",
                 marginBottom: "1.25rem",
               }}
             >
@@ -165,18 +163,16 @@ export default function Footer() {
                       style={{
                         fontFamily: "var(--font-outfit)",
                         fontSize: "0.88rem",
-                        fontWeight: 300,
-                        color: "rgba(240,228,235,0.5)",
+                        fontWeight: 400,
+                        color: "rgba(44,0,21,0.55)",
                         textDecoration: "none",
                         transition: "color 0.2s ease",
                       }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLAnchorElement).style.color =
-                          "#FF1B6D";
+                        (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLAnchorElement).style.color =
-                          "rgba(240,228,235,0.5)";
+                        (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.55)";
                       }}
                     >
                       {link.label}
@@ -195,7 +191,7 @@ export default function Footer() {
                 fontSize: "0.6rem",
                 letterSpacing: "0.2em",
                 textTransform: "uppercase",
-                color: "rgba(255,220,240,0.6)",
+                color: "rgba(44,0,21,0.5)",
                 marginBottom: "1.25rem",
               }}
             >
@@ -208,19 +204,18 @@ export default function Footer() {
                   display: "flex",
                   alignItems: "center",
                   gap: "0.75rem",
-                  color: "rgba(240,228,235,0.5)",
+                  color: "rgba(44,0,21,0.6)",
                   textDecoration: "none",
                   fontFamily: "var(--font-outfit)",
                   fontSize: "0.88rem",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   transition: "color 0.2s ease",
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color =
-                    "rgba(240,228,235,0.5)";
+                  (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.6)";
                 }}
               >
                 <Mail size={14} style={{ flexShrink: 0, color: "#FF1B6D" }} />
@@ -231,10 +226,10 @@ export default function Footer() {
                   display: "flex",
                   alignItems: "center",
                   gap: "0.75rem",
-                  color: "rgba(240,228,235,0.35)",
+                  color: "rgba(44,0,21,0.45)",
                   fontFamily: "var(--font-outfit)",
                   fontSize: "0.88rem",
-                  fontWeight: 300,
+                  fontWeight: 400,
                 }}
               >
                 <MapPin size={14} style={{ flexShrink: 0, color: "#FF1B6D" }} />
@@ -248,7 +243,7 @@ export default function Footer() {
                   gap: "0.5rem",
                   marginTop: "0.5rem",
                   padding: "0.6rem 1.2rem",
-                  border: "1px solid rgba(255,27,109,0.35)",
+                  border: "1px solid rgba(255,27,109,0.4)",
                   borderRadius: "2px",
                   color: "#FF1B6D",
                   fontFamily: "var(--font-space-mono)",
@@ -260,16 +255,12 @@ export default function Footer() {
                   width: "fit-content",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                    "rgba(255,27,109,0.1)";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                    "0 0 20px rgba(255,27,109,0.2)";
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255,27,109,0.1)";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 20px rgba(255,27,109,0.2)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor =
-                    "transparent";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow =
-                    "none";
+                  (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "transparent";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
                 }}
               >
                 Booking Inquiry
@@ -283,7 +274,7 @@ export default function Footer() {
           style={{
             width: "100%",
             height: "1px",
-            backgroundColor: "rgba(240,228,235,0.06)",
+            backgroundColor: "rgba(44,0,21,0.1)",
             marginBottom: "2rem",
           }}
         />
@@ -303,7 +294,7 @@ export default function Footer() {
               fontFamily: "var(--font-space-mono)",
               fontSize: "0.6rem",
               letterSpacing: "0.08em",
-              color: "rgba(255,220,240,0.6)",
+              color: "rgba(44,0,21,0.45)",
             }}
           >
             &copy; {new Date().getFullYear()} NAINI. All rights reserved.
@@ -333,7 +324,7 @@ export default function Footer() {
                 fontSize: "0.58rem",
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "rgba(255,220,240,0.6)",
+                color: "rgba(44,0,21,0.5)",
                 whiteSpace: "nowrap",
               }}
             >
@@ -344,7 +335,11 @@ export default function Footer() {
               alt="Range Of View Studios"
               width={72}
               height={28}
-              style={{ objectFit: "contain", display: "block" }}
+              style={{
+                objectFit: "contain",
+                display: "block",
+                filter: "brightness(0) saturate(100%)",
+              }}
             />
           </a>
         </div>

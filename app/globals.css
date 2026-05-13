@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #B5105A;
-  --color-surface: #9A0D4D;
-  --color-elevated: #7D0A3E;
-  --color-accent: #FF6EB4;
-  --color-accent-dim: rgba(255, 110, 180, 0.2);
-  --color-accent-glow: rgba(255, 110, 180, 0.45);
-  --color-text: #FFF0F6;
-  --color-text-muted: rgba(255, 230, 242, 0.6);
-  --color-border: rgba(240, 228, 235, 0.08);
+  --color-bg: #FFC2D1;
+  --color-surface: #FFB3C6;
+  --color-elevated: #FF8FAB;
+  --color-accent: #FF1B6D;
+  --color-accent-dim: rgba(255, 27, 109, 0.12);
+  --color-accent-glow: rgba(255, 27, 109, 0.3);
+  --color-text: #2C0015;
+  --color-text-muted: rgba(44, 0, 21, 0.55);
+  --color-border: rgba(44, 0, 21, 0.1);
 
   --font-display: var(--font-cormorant);
   --font-body: var(--font-outfit);
@@ -31,12 +31,11 @@ html {
 }
 
 body {
-  background-color: #B5105A;
+  background-color: #FFC2D1;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255,160,210,0.25) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(80,0,30,0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 35% at 0% 60%, rgba(200,10,90,0.2) 0%, transparent 55%);
-  color: #F0E4EB;
+    radial-gradient(ellipse 75% 50% at 50% 0%, rgba(255,229,236,0.8) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 100%, rgba(255,100,150,0.18) 0%, transparent 55%);
+  color: #2C0015;
   font-family: var(--font-outfit), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,15 +49,15 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.09;
+  opacity: 0.05;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
 }
 
 /* Selection highlight */
 ::selection {
-  background-color: rgba(255, 27, 109, 0.35);
-  color: #F0E4EB;
+  background-color: rgba(255, 27, 109, 0.25);
+  color: #2C0015;
 }
 
 /* Custom scrollbar */
@@ -66,7 +65,7 @@ body::after {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #9A0D4D;
+  background: #FFB3C6;
 }
 ::-webkit-scrollbar-thumb {
   background: #FF1B6D;

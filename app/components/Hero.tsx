@@ -38,10 +38,9 @@ export default function Hero() {
       style={{
         position: "relative",
         minHeight: "100svh",
-        backgroundColor: "#B5105A",
+        backgroundColor: "#FFC2D1",
         display: "flex",
         alignItems: "center",
-        /* Push content visual-center below the fixed 72px navbar */
         paddingTop: "72px",
         overflow: "hidden",
       }}
@@ -57,8 +56,8 @@ export default function Hero() {
           fontFamily: "var(--font-cormorant)",
           fontSize: "clamp(5rem, 18vw, 16rem)",
           fontWeight: 700,
-          color: "#F0E4EB",
-          opacity: 0.04,
+          color: "#2C0015",
+          opacity: 0.05,
           letterSpacing: "0.1em",
           pointerEvents: "none",
           userSelect: "none",
@@ -69,7 +68,7 @@ export default function Hero() {
         NAINI
       </span>
 
-      {/* Pink light bleed behind image */}
+      {/* Soft glow behind image */}
       <div
         aria-hidden="true"
         style={{
@@ -79,13 +78,13 @@ export default function Hero() {
           width: "65%",
           height: "100%",
           background:
-            "radial-gradient(ellipse 60% 70% at 75% 45%, rgba(255,220,240,0.18) 0%, transparent 70%)",
+            "radial-gradient(ellipse 60% 70% at 75% 45%, rgba(255,143,171,0.35) 0%, transparent 70%)",
           pointerEvents: "none",
           zIndex: 1,
         }}
       />
 
-      {/* Hero image — right side, offset to fill entire section including paddingTop space */}
+      {/* Hero image */}
       <div
         style={{
           position: "absolute",
@@ -105,17 +104,17 @@ export default function Hero() {
           style={{
             objectFit: "cover",
             objectPosition: "center top",
-            boxShadow: "-80px 0 120px rgba(255,27,109,0.25)",
+            boxShadow: "-80px 0 120px rgba(255,143,171,0.4)",
           }}
         />
-        {/* Fade gradient on left edge of image */}
+        {/* Fade gradient on left edge */}
         <div
           aria-hidden="true"
           style={{
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to right, #B5105A 0%, rgba(181,16,90,0.5) 30%, transparent 60%)",
+              "linear-gradient(to right, #FFC2D1 0%, rgba(255,194,209,0.55) 30%, transparent 60%)",
           }}
         />
       </div>
@@ -148,7 +147,7 @@ export default function Hero() {
           Artist · Songwriter
         </motion.p>
 
-        {/* Name — GSAP SplitText handles per-char bounce */}
+        {/* Name */}
         <SplitText
           tag="h1"
           text="NAINI"
@@ -166,7 +165,7 @@ export default function Hero() {
             fontSize: "clamp(4.5rem, 10vw, 9rem)",
             fontWeight: 700,
             lineHeight: 0.88,
-            color: "#F0E4EB",
+            color: "#2C0015",
             letterSpacing: "-0.02em",
             marginBottom: "1.5rem",
             perspective: "600px",
@@ -180,7 +179,7 @@ export default function Hero() {
             fontFamily: "var(--font-cormorant)",
             fontSize: "clamp(1rem, 2vw, 1.35rem)",
             fontStyle: "italic",
-            color: "rgba(240,228,235,0.6)",
+            color: "rgba(44,0,21,0.6)",
             marginBottom: "1.75rem",
           }}
         >
@@ -195,7 +194,7 @@ export default function Hero() {
             height: "1px",
             backgroundColor: "#FF1B6D",
             marginBottom: "1.75rem",
-            boxShadow: "0 0 8px rgba(255,27,109,0.5)",
+            boxShadow: "0 0 8px rgba(255,27,109,0.4)",
           }}
         />
 
@@ -205,9 +204,9 @@ export default function Hero() {
           style={{
             fontFamily: "var(--font-outfit)",
             fontSize: "0.875rem",
-            fontWeight: 300,
+            fontWeight: 400,
             lineHeight: 1.85,
-            color: "rgba(255,230,242,0.7)",
+            color: "rgba(44,0,21,0.55)",
             marginBottom: "2.25rem",
             maxWidth: "320px",
           }}
@@ -227,7 +226,7 @@ export default function Hero() {
             style={{
               padding: "0.75rem 1.75rem",
               backgroundColor: "#FF1B6D",
-              color: "#07050C",
+              color: "#FFF0F6",
               fontFamily: "var(--font-space-mono)",
               fontSize: "0.7rem",
               letterSpacing: "0.1em",
@@ -240,7 +239,7 @@ export default function Hero() {
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLButtonElement).style.boxShadow =
-                "0 0 30px rgba(255,27,109,0.5)";
+                "0 0 30px rgba(255,27,109,0.45)";
               (e.currentTarget as HTMLButtonElement).style.transform =
                 "translateY(-2px)";
             }}
@@ -257,26 +256,24 @@ export default function Hero() {
             style={{
               padding: "0.75rem 1.75rem",
               backgroundColor: "transparent",
-              color: "#F0E4EB",
+              color: "#2C0015",
               fontFamily: "var(--font-space-mono)",
               fontSize: "0.7rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
-              border: "1px solid rgba(255,230,242,0.4)",
+              border: "1px solid rgba(44,0,21,0.3)",
               borderRadius: "2px",
               cursor: "pointer",
               transition: "all 0.25s ease",
               fontWeight: 400,
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor =
-                "#FF1B6D";
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "#FF1B6D";
               (e.currentTarget as HTMLButtonElement).style.color = "#FF1B6D";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor =
-                "rgba(240,228,235,0.25)";
-              (e.currentTarget as HTMLButtonElement).style.color = "#F0E4EB";
+              (e.currentTarget as HTMLButtonElement).style.borderColor = "rgba(44,0,21,0.3)";
+              (e.currentTarget as HTMLButtonElement).style.color = "#2C0015";
             }}
           >
             Discover
@@ -298,16 +295,16 @@ export default function Hero() {
               href="#"
               aria-label={label}
               style={{
-                color: "rgba(255,230,242,0.65)",
+                color: "rgba(44,0,21,0.45)",
                 transition: "all 0.25s ease",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#FFF0F6";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
                 (e.currentTarget as HTMLAnchorElement).style.filter =
-                  "drop-shadow(0 0 10px rgba(255,255,255,0.7))";
+                  "drop-shadow(0 0 8px rgba(255,27,109,0.5))";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,230,242,0.65)";
+                (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.45)";
                 (e.currentTarget as HTMLAnchorElement).style.filter = "none";
               }}
             >
@@ -327,14 +324,14 @@ export default function Hero() {
           left: "clamp(2rem, 5vw, 5rem)",
           zIndex: 10,
           background: "none",
-          border: "1px solid rgba(255,230,242,0.3)",
+          border: "1px solid rgba(44,0,21,0.2)",
           borderRadius: "50px",
           cursor: "pointer",
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
           gap: "0.5rem",
-          color: "rgba(255,230,242,0.65)",
+          color: "rgba(44,0,21,0.45)",
           padding: "0.45rem 0.9rem 0.45rem 0.7rem",
           animation: "scrollBounce 2.5s ease-in-out infinite",
         }}
@@ -356,10 +353,6 @@ export default function Hero() {
         @keyframes scrollBounce {
           0%, 100% { transform: translateY(0); opacity: 0.5; }
           50% { transform: translateY(6px); opacity: 1; }
-        }
-
-        @media (max-width: 768px) {
-          /* On mobile, image is full width with content overlaid */
         }
       `}</style>
     </div>

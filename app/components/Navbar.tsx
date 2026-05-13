@@ -25,7 +25,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Active section tracking
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -67,16 +66,16 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: scrolled ? "rgba(155,10,65,0.96)" : "transparent",
+          backgroundColor: scrolled ? "rgba(255,179,198,0.92)" : "transparent",
           backdropFilter: scrolled ? "blur(20px)" : "none",
           borderBottom: scrolled
-            ? "1px solid rgba(240,228,235,0.06)"
+            ? "1px solid rgba(44,0,21,0.08)"
             : "1px solid transparent",
           transition: "all 0.4s cubic-bezier(0.32,0.72,0,1)",
         }}
         aria-label="Main navigation"
       >
-        {/* Logo */}
+        {/* Logo — inverted to dark on light bg */}
         <a
           href="#home"
           onClick={(e) => {
@@ -90,7 +89,11 @@ export default function Navbar() {
             alt="NAINI"
             width={90}
             height={32}
-            style={{ objectFit: "contain", display: "block" }}
+            style={{
+              objectFit: "contain",
+              display: "block",
+              filter: "brightness(0) saturate(100%)",
+            }}
             priority
           />
         </a>
@@ -122,7 +125,7 @@ export default function Navbar() {
                     fontSize: "0.7rem",
                     letterSpacing: "0.12em",
                     textTransform: "uppercase",
-                    color: isActive ? "#FF1B6D" : "#7B6B77",
+                    color: isActive ? "#FF1B6D" : "rgba(44,0,21,0.55)",
                     textDecoration: "none",
                     position: "relative",
                     paddingBottom: "4px",
@@ -130,13 +133,11 @@ export default function Navbar() {
                   }}
                   onMouseEnter={(e) => {
                     if (!isActive)
-                      (e.currentTarget as HTMLAnchorElement).style.color =
-                        "#F0E4EB";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#2C0015";
                   }}
                   onMouseLeave={(e) => {
                     if (!isActive)
-                      (e.currentTarget as HTMLAnchorElement).style.color =
-                        "#7B6B77";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "rgba(44,0,21,0.55)";
                   }}
                 >
                   {link.label}
@@ -150,7 +151,7 @@ export default function Navbar() {
                         right: 0,
                         height: "1px",
                         backgroundColor: "#FF1B6D",
-                        boxShadow: "0 0 6px rgba(255,27,109,0.6)",
+                        boxShadow: "0 0 6px rgba(255,27,109,0.5)",
                       }}
                     />
                   )}
@@ -168,7 +169,7 @@ export default function Navbar() {
           style={{
             background: "none",
             border: "none",
-            color: "#F0E4EB",
+            color: "#2C0015",
             cursor: "pointer",
             padding: "4px",
             display: "none",
@@ -186,7 +187,7 @@ export default function Navbar() {
             position: "fixed",
             inset: 0,
             zIndex: 999,
-            backgroundColor: "rgba(125,10,62,0.98)",
+            backgroundColor: "rgba(255,179,198,0.98)",
             backdropFilter: "blur(20px)",
             display: "flex",
             flexDirection: "column",
@@ -211,7 +212,7 @@ export default function Navbar() {
                 fontSize: "clamp(2.5rem, 8vw, 4rem)",
                 fontWeight: 400,
                 fontStyle: "italic",
-                color: "#F0E4EB",
+                color: "#2C0015",
                 textDecoration: "none",
                 transition: "color 0.2s ease",
               }}
@@ -219,7 +220,7 @@ export default function Navbar() {
                 (e.currentTarget as HTMLAnchorElement).style.color = "#FF1B6D";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#F0E4EB";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#2C0015";
               }}
             >
               {link.label}
