@@ -24,8 +24,7 @@ export default function LoadingScreen() {
 
   return (
     <AnimatePresence>
-      {phase !== "gone" && (
-        <motion.div
+      <motion.div
           key="loader"
           initial={{ y: 0 }}
           animate={{ y: 0 }}
@@ -93,7 +92,6 @@ export default function LoadingScreen() {
           />
 
         </motion.div>
-      )}
     </AnimatePresence>
   );
 }
